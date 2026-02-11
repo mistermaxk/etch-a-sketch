@@ -1,2 +1,18 @@
 /* etch-a-sketch 
    max k 2026 */
+html {
+    box-sizing: border-box;
+}
+
+#container {
+    margin: 0 auto;
+    width: 800px;
+    height: 800px;
+    border: 1px solid #000;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-square {
+    background-color: #eee;
+}
