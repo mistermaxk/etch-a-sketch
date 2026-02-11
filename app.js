@@ -1,1 +1,3 @@
-// 16 x 16 grid of square divs
+// etch-a-sketch
+// max k 2026
+const container = document.querySelector("#container");
