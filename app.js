@@ -30,7 +30,10 @@ function createGrid(size = 16) {
 }
 
 function hoverEffect(e) {
-    e.target.style.backgroundColor = "gray";
+    let r = Math.floor(Math.random() * 255 + 1);
+    let g = Math.floor(Math.random() * 255 + 1);
+    let b = Math.floor(Math.random() * 255 + 1);
+    e.target.style.backgroundColor = `rgb(${r} ${g} ${b})`;
 }
 
 createGrid();
