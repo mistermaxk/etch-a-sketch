@@ -24,16 +24,23 @@ function createGrid(size = 16) {
         square.classList.add("grid-square");
         square.style.flexBasis = `${100/size}%`;
         square.style.height = `${100/size}%`;
+        square.style.opacity = 0;
         square.addEventListener("mouseover", (e) => hoverEffect(e));
         container.appendChild(square);
     }
 }
 
 function hoverEffect(e) {
-    let r = Math.floor(Math.random() * 255 + 1);
-    let g = Math.floor(Math.random() * 255 + 1);
-    let b = Math.floor(Math.random() * 255 + 1);
-    e.target.style.backgroundColor = `rgb(${r} ${g} ${b})`;
+    if (e.target.style.opacity < 0.1) {
+        let r = Math.floor(Math.random() * 255 + 1);
+        let g = Math.floor(Math.random() * 255 + 1);
+        let b = Math.floor(Math.random() * 255 + 1);
+        e.target.style.opacity = 0.1;
+        e.target.style.backgroundColor = `rgb(${r} ${g} ${b})`;
+    } else if (e.target.style.opacity < 1) {
+        let currentOpacity = e.target.style.opacity;
+        e.target.style.opacity = Number(currentOpacity) + 0.1;
+    }
 }
 
 createGrid();
