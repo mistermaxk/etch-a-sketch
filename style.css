@@ -4,10 +4,14 @@ html {
     box-sizing: border-box;
 }
 
-#container {
-    margin: 0 auto;
-    width: 800px;
-    height: 800px;
+body {
+    text-align: center;
+}
+
+.container {
+    margin: 12px auto;
+    width: 720px;
+    height: 720px;
     border: 1px solid #000;
     display: flex;
     flex-wrap: wrap;
