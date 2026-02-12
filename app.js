@@ -8,8 +8,13 @@ function createGrid(size) {
         square.classList.add("grid-square");
         square.style.flexBasis = `${100/size}%`;
         square.style.height = `${100/size}%`;
+        square.addEventListener("mouseover", (e) => hoverEffect(e));
         container.appendChild(square);
     }
 }
 
-createGrid(4);
+function hoverEffect(e) {
+    e.target.style.backgroundColor = "gray";
+}
+
+createGrid(16);
